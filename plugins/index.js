@@ -10,7 +10,7 @@ const etherscan = require('../commands/etherscan');
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-
+  require('cypress-mochawesome-reporter/plugin')(on);
   on('before:browser:launch', async (browser = {}, arguments_) => {
     if (browser.name === 'chrome' && browser.isHeadless) {
       console.log('TRUE'); // required by cypress ¯\_(ツ)_/¯

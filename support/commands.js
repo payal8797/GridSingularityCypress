@@ -1,6 +1,7 @@
 import '@testing-library/cypress/add-commands';
 import 'cypress-wait-until';
-
+import 'cypress-xpath'; 
+import 'cypress-mochawesome-reporter/register'; 
 // puppeteer commands
 
 Cypress.Commands.add('initPuppeteer', () => {
